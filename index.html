@@ -1,1 +1,190 @@
-<h1>TEST</h1>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AdminLTE 3 | Log in</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://freddygreve.com/legere-corona/plugins/fontawesome-free/css/all.min.css">
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://freddygreve.com/legere-corona/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+        <link rel="stylesheet" href="https://freddygreve.com/legere-corona/dist/css/adminlte.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <style type="text/css">
+            .login-page {
+                background: url(https://freddygreve.com/legere-corona/dist/img/innenansicht-restaurant-bar-und-cafe-legere.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            .legere-logo {
+                width: 200px;
+                border-radius: 100px;
+                border: 5px solid #fff;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body class="hold-transition login-page">
+        <div class="login-box">
+            <div class="login-logo">
+                <a href="https://freddygreve.com/legere-corona/index2.html"><img src="https://freddygreve.com/legere-corona/dist/img/legere-logo.png" class="legere-logo"></a>
+            </div>
+            <div class="card" id="card-1">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">
+                        <b>Herzlich willkommen in deinem Légère!</b><br><br>
+                        Besondere Zeiten erfordern besondere Maßnahmen.<br><br>
+                        Aus hygienischen Gründen verzichten wir derzeit weitestgehend auf Speisekarten an den Tischen. Stattdessen bieten wir unsere Speisekarte online zum Abruf mit dem eigenen Smartphone an.<br><br>
+                        Außerdem sind wir verpflichtet, von jedem Gast die Kontaktdaten aufzunehmen. Diese Daten werden vier Wochen gespeichert und anschließend automatisch vernichtet.<br><br>
+                        Bei Fragen wende dich gerne an die Servicekraft.
+                    </p>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="covoga">
+                                <label for="covoga">
+                                    Ich bin mit der Datenerhebung nach §2 Abs. 3 CoronaVO Gaststätten einverstanden.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8"></div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block" disabled id="next-1">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card d-none" id="card-2">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">
+                        <b>Angaben der Kontaktdaten</b>
+                    </p>
+                    <p class="login-box-msg">
+                        Wie viele Gäste seid ihr (du inklusive)?
+                        <select class="form-control" id="paxzahl">
+                            <option disabled selected>Bitte wählen</option>
+                            <option value="1">Ich bin alleine</option>
+                            <option value="2">2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                            <option value="5">5 Peronen</option>
+                            <option value="6">6 Peronen</option>
+                        </select>
+                    </p>
+                    <p class="login-box-msg">
+                        An welchem Tisch sitzt du?
+                        <select class="form-control" id="paxzahl">
+                            <option disabled selected>Bitte wählen</option>
+                            <option value="1">Tisch 1</option>
+                            <option value="2">Tisch 2</option>
+                            <option value="3">Tisch 3</option>
+                            <option value="4">Tisch 4</option>
+                            <option value="5">Tisch 5</option>
+                            <option value="6">Tisch 10</option>
+                            <option value="6">Tisch 13</option>
+                            <option value="6">Tisch 15</option>
+                            <option value="6">Tisch 20</option>
+                            <option value="6">Tisch 30</option>
+                            <option value="6">Tisch 40</option>
+                            <option value="6">Tisch 50</option>
+                            <option value="6">Tisch 60</option>
+                        </select>
+                    </p>
+                    <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block" disabled id="next-2">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card d-none" id="card-3">
+                <div class="card-body login-card-body">
+                    <p class="login-box-msg">
+                        <b>Angaben der Kontaktdaten</b><br><br>
+                    </p>
+                    <div id="gast-1">
+                        <p for="exampleInputEmail1">Gast 1</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Vor- und Nachname">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="E-Mail Adresse">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="gast-2">
+                        <p for="exampleInputEmail1">Gast 2</p>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Vor- und Nachname">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-user"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="E-Mail Adresse">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                        </div>
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-primary btn-block" disabled id="next-3">Weiter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://freddygreve.com/legere-corona/plugins/jquery/jquery.min.js"></script>
+        <script src="https://freddygreve.com/legere-corona/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://freddygreve.com/legere-corona/dist/js/adminlte.min.js"></script>
+        <script type="text/javascript"> 
+            $("#covoga").on("change", function() {
+                if ($("#covoga").is(':checked')) {
+                    $("#next-1").prop('disabled', false);
+                } else {
+                    $("#next-1").prop('disabled', true);
+                }
+            });
+            $("#next-1").on("click", function() {
+                if ($("#covoga").is(':checked')) {
+                    $("#card-1").addClass("d-none");
+                    $("#card-2").removeClass("d-none");
+                }
+            });
+            $("#paxzahl").on("change", function() {
+                if ($("#paxzahl").val() > 0) {
+                    $("#next-2").prop('disabled', false);
+                }
+            });
+            $("#next-2").on("click", function() {
+                if ($("#paxzahl").val() > 0) {
+                    $("#card-2").addClass("d-none");
+                    $("#card-3").removeClass("d-none");
+                }
+            });
+        </script>
+    </body>
+</html>
