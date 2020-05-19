@@ -65,10 +65,10 @@
                         <b>Angaben der Kontaktdaten</b>
                     </p>
                     <p class="login-box-msg">
-                        Wie viele Gäste seid ihr (du inklusive)?
+                        Wie viele Gäste möchtest du eintragen?<br>(du inklusive)
                         <select class="form-control" id="paxzahl">
                             <option disabled selected>Bitte wählen</option>
-                            <option value="1">Ich bin alleine</option>
+                            <option value="1">1 Person</option>
                             <option value="2">2 Personen</option>
                             <option value="3">3 Personen</option>
                             <option value="4">4 Personen</option>
@@ -78,21 +78,21 @@
                     </p>
                     <p class="login-box-msg">
                         An welchem Tisch sitzt du?
-                        <select class="form-control" id="paxzahl">
+                        <select class="form-control" id="tischnr">
                             <option disabled selected>Bitte wählen</option>
                             <option value="1">Tisch 1</option>
                             <option value="2">Tisch 2</option>
                             <option value="3">Tisch 3</option>
                             <option value="4">Tisch 4</option>
                             <option value="5">Tisch 5</option>
-                            <option value="6">Tisch 10</option>
-                            <option value="6">Tisch 13</option>
-                            <option value="6">Tisch 15</option>
-                            <option value="6">Tisch 20</option>
-                            <option value="6">Tisch 30</option>
-                            <option value="6">Tisch 40</option>
-                            <option value="6">Tisch 50</option>
-                            <option value="6">Tisch 60</option>
+                            <option value="10">Tisch 10</option>
+                            <option value="13">Tisch 13</option>
+                            <option value="15">Tisch 15</option>
+                            <option value="20">Tisch 20</option>
+                            <option value="30">Tisch 30</option>
+                            <option value="40">Tisch 40</option>
+                            <option value="50">Tisch 50</option>
+                            <option value="60">Tisch 60</option>
                         </select>
                     </p>
                     <div class="row">
@@ -110,9 +110,9 @@
                         <b>Angaben der Kontaktdaten</b><br><br>
                     </p>
                     <div id="gast-1">
-                        <p for="exampleInputEmail1">Gast 1</p>
+                        <p class="login-box-msg">- Gast <span id="guestnr">1</span> -</p>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Vor- und Nachname">
+                            <input type="text" class="form-control" placeholder="Vorname" id="form-vname">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
@@ -120,38 +120,69 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="E-Mail Adresse">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="gast-2">
-                        <p for="exampleInputEmail1">Gast 2</p>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Vor- und Nachname">
+                            <input type="text" class="form-control" placeholder="Nachname" id="form-nname">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-user"></span>
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="E-Mail Adresse">
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                        <p>Bitte gib eine Telefonnummer <b>oder</b> eine Adresse an.</p>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-primary card-outline card-outline-tabs">
+                                    <div class="card-header p-0 border-bottom-0">
+                                        <ul class="nav nav-tabs" id="custom-tabs-four-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="custom-tabs-four-home-tab" data-toggle="pill" href="#custom-tabs-four-home" role="tab" aria-controls="custom-tabs-four-home" aria-selected="true">Telefonnummer</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="custom-tabs-four-profile-tab" data-toggle="pill" href="#custom-tabs-four-profile" role="tab" aria-controls="custom-tabs-four-profile" aria-selected="false">Adresse</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="tab-content" id="custom-tabs-four-tabContent">
+                                            <div class="tab-pane fade active show" id="custom-tabs-four-home" role="tabpanel" aria-labelledby="custom-tabs-four-home-tab">
+                                                <div class="input-group mb-3">
+                                                    <input type="tel" class="form-control" placeholder="Telefon" id="form-tel">
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text">
+                                                            <span class="fas fa-phone"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="custom-tabs-four-profile" role="tabpanel" aria-labelledby="custom-tabs-four-profile-tab">
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" placeholder="Straße & Hausnummer" id="form-adresse1">
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text">
+                                                            <span class="fas fa-home"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form-control" placeholder="PLZ & Ort" id="form-adresse2">
+                                                    <div class="input-group-append">
+                                                        <div class="input-group-text">
+                                                            <span class="fas fa-home"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-6">
                         </div>
-                        <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block" disabled id="next-3">Weiter</button>
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary btn-block" id="next-guest" disabled>Nächster Gast</button>
+                            <button type="submit" class="btn btn-primary btn-block" id="guests-done" disabled>Weiter</button>
                         </div>
                     </div>
                 </div>
@@ -160,7 +191,13 @@
         <script src="https://freddygreve.com/legere-corona/plugins/jquery/jquery.min.js"></script>
         <script src="https://freddygreve.com/legere-corona/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="https://freddygreve.com/legere-corona/dist/js/adminlte.min.js"></script>
-        <script type="text/javascript"> 
+        <script type="text/javascript">
+            var queryString = window.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var tischnr = urlParams.get('tid');
+            if (tischnr) {
+                $("#tischnr").val(tischnr);
+            }
             $("#covoga").on("change", function() {
                 if ($("#covoga").is(':checked')) {
                     $("#next-1").prop('disabled', false);
@@ -175,7 +212,12 @@
                 }
             });
             $("#paxzahl").on("change", function() {
-                if ($("#paxzahl").val() > 0) {
+                if ($("#paxzahl").val() > 0 && $("#tischnr").val() > 0) {
+                    $("#next-2").prop('disabled', false);
+                }
+            });
+            $("#tischnr").on("change", function() {
+                if ($("#paxzahl").val() > 0 && $("#tischnr").val() > 0) {
                     $("#next-2").prop('disabled', false);
                 }
             });
@@ -183,8 +225,92 @@
                 if ($("#paxzahl").val() > 0) {
                     $("#card-2").addClass("d-none");
                     $("#card-3").removeClass("d-none");
+                    if ($("#paxzahl").val() == 1) {
+                        $("#next-guest").addClass("d-none");
+                    } else {
+                        $("#guests-done").addClass("d-none");
+                    }
                 }
             });
+            $("#next-guest").on("click", function () {
+                var data = new FormData();
+                data.append('tischnr', document.getElementById("tischnr").value);
+                data.append('vname', document.getElementById("form-vname").value);
+                data.append('nname', document.getElementById("form-nname").value);
+                data.append('tel', document.getElementById("form-tel").value);
+                data.append('adresse1', document.getElementById("form-adresse1").value);
+                data.append('adresse2', document.getElementById("form-adresse2").value);
+                $.ajax({
+                    url: 'https://www.freddygreve.com/legere-intern/add-guest-exec.php',
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    type: 'POST',
+                    success: function(data){
+                        var nextguest = parseInt($("#guestnr").html())+1;
+                        $("#guestnr").html(nextguest);
+                        $("#form-vname").val("");
+                        $("#form-nname").val("");
+                        $("#form-tel").val("");
+                        $("#form-adresse1").val("");
+                        $("#form-adresse2").val("");
+                        if (nextguest == $("#paxzahl").val()) {
+                            $("#next-guest").addClass("d-none");
+                            $("#guests-done").removeClass("d-none");
+                        }
+                    }
+                });
+            });
+            
+            $("#guests-done").on("click", function () {
+                var data = new FormData();
+                data.append('tischnr', document.getElementById("tischnr").value);
+                data.append('vname', document.getElementById("form-vname").value);
+                data.append('nname', document.getElementById("form-nname").value);
+                data.append('tel', document.getElementById("form-tel").value);
+                data.append('adresse1', document.getElementById("form-adresse1").value);
+                data.append('adresse2', document.getElementById("form-adresse2").value);
+                $.ajax({
+                    url: 'https://www.freddygreve.com/legere-intern/add-guest-exec.php',
+                    data: data,
+                    processData: false,
+                    contentType: false,
+                    type: 'POST',
+                    success: function(data){
+                        $("#form-vname").val("");
+                        $("#form-nname").val("");
+                        $("#form-tel").val("");
+                        $("#form-adresse1").val("");
+                        $("#form-adresse2").val("");
+                    }
+                });
+            });
+
+            function checkguestform () {
+                if ($("#form-vname").val() == "" || $("#form-nname").val() == "") {
+                    $("#next-guest").prop('disabled', true);
+                    $("#guests-done").prop('disabled', true);
+                } else {
+                    if ($("#form-tel").val() != "") {
+                        $("#next-guest").prop('disabled', false);
+                        $("#guests-done").prop('disabled', false);
+                    } else {
+                        if ($("#form-adresse1").val() != "" && $("#form-adresse2").val() != "") {
+                            $("#next-guest").prop('disabled', false);
+                            $("#guests-done").prop('disabled', false);
+                        } else {
+                            $("#next-guest").prop('disabled', true);
+                            $("#guests-done").prop('disabled', true);
+                        }
+                    }
+                }
+            }
+
+            $("#form-vname").on("keyup", checkguestform);
+            $("#form-nname").on("keyup", checkguestform);
+            $("#form-tel").on("keyup", checkguestform);
+            $("#form-adresse1").on("keyup", checkguestform);
+            $("#form-adresse2").on("keyup", checkguestform);
         </script>
     </body>
 </html>
