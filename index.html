@@ -34,6 +34,11 @@
             </div>
             <div class="card" id="card-1">
                 <div class="card-body login-card-body">
+                    <div class="alert alert-success alert-dismissible d-none" id="wifi-info">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-check"></i> Verbunden</h5>
+                        Du bist jetzt mit dem WLAN verbunden.
+                    </div>
                     <p class="login-box-msg">
                         <b>Herzlich willkommen in deinem Légère!</b><br><br>
                         Besondere Zeiten erfordern besondere Maßnahmen.<br><br>
@@ -55,6 +60,14 @@
                         <div class="col-8"></div>
                         <div class="col-4">
                             <button type="submit" class="btn btn-primary btn-block" disabled id="next-1">Weiter</button>
+                        </div>
+                    </div>
+                    <p class="login-box-msg">
+                        <b>- ODER -</b><br><br>
+                    Hast du deine Daten heute schon eingetragen?</p>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="/speisekarte" class="btn btn-primary btn-block" disabled id="next-1">Direkt zur Speisekarte</a>
                         </div>
                     </div>
                 </div>
@@ -195,6 +208,9 @@
             var queryString = window.location.search;
             var urlParams = new URLSearchParams(queryString);
             var tischnr = urlParams.get('tid');
+            if (urlParams.get('wifi') == "1") {
+                $("#wifi-info").removeClass("d-none");
+            }
             if (tischnr) {
                 $("#tischnr").val(tischnr);
             }
@@ -261,7 +277,7 @@
                     }
                 });
             });
-            
+
             $("#guests-done").on("click", function () {
                 var data = new FormData();
                 data.append('tischnr', document.getElementById("tischnr").value);
